@@ -18,38 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klN-3C-4hz">
-                                <rect key="frame" x="101" y="318" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klN-3C-4hz">
+                                <rect key="frame" x="66" y="301" width="101" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Prev"/>
+                                <state key="normal" title="Prev" image="arrowLeft"/>
+                                <state key="disabled" image="arrowLeftDisabled"/>
                                 <connections>
                                     <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YaO-Yf-Qyh"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOl-pa-KZA">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOl-pa-KZA" userLabel="Card">
                                 <rect key="frame" x="64" y="465" width="252" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="                      Purple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixp-nz-H9q" userLabel="back label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="                      Purple" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixp-nz-H9q" userLabel="back label">
                                         <rect key="frame" x="0.0" y="0.0" width="252" height="174"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.82329663099999995" green="1" blue="0.58630579159999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    What is your favourite Color?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQp-vO-VBg" userLabel="front label">
-                                        <rect key="frame" x="-10" y="-67" width="271" height="308"/>
+                                        <rect key="frame" x="-12" y="-24" width="276" height="222"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.51666785130000004" green="0.8564020739" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIq-Bc-btn">
-                                        <rect key="frame" x="91" y="122" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIq-Bc-btn">
+                                        <rect key="frame" x="97" y="111" width="58" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="+"/>
+                                        <state key="normal" title="+" image="addButton"/>
                                         <connections>
                                             <segue destination="jdF-0d-6X3" kind="show" id="0zk-2B-BHV"/>
                                         </connections>
@@ -61,10 +62,10 @@
                                     <outletCollection property="gestureRecognizers" destination="EO8-jY-8QZ" appends="YES" id="Rud-NF-JXE"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cu3-5Z-hdR">
-                                <rect key="frame" x="253" y="318" width="32" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cu3-5Z-hdR">
+                                <rect key="frame" x="218" y="301" width="102" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="Next" image="arrowRight"/>
                                 <connections>
                                     <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o93-6K-O4P"/>
                                 </connections>
@@ -75,6 +76,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="g07-Ea-Woc"/>
                     <connections>
+                        <outlet property="Container" destination="EOl-pa-KZA" id="U4f-gy-Kzm"/>
                         <outlet property="backLabel" destination="Ixp-nz-H9q" id="Glz-bu-x7J"/>
                         <outlet property="frontLabel" destination="GQp-vO-VBg" id="qqg-oP-Z8w"/>
                         <outlet property="nextButton" destination="Cu3-5Z-hdR" id="S5A-Uk-4gk"/>
@@ -88,7 +90,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2337" y="-129"/>
+            <point key="canvasLocation" x="-2338.4000000000001" y="-129.08545727136433"/>
         </scene>
         <!--Creation View Controller-->
         <scene sceneID="kAu-dQ-z7A">
@@ -156,4 +158,10 @@
             <point key="canvasLocation" x="-1471" y="-129"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addButton" width="64" height="64"/>
+        <image name="arrowLeft" width="64" height="64"/>
+        <image name="arrowLeftDisabled" width="64" height="64"/>
+        <image name="arrowRight" width="64" height="64"/>
+    </resources>
 </document>

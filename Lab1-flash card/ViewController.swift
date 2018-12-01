@@ -15,6 +15,7 @@ struct Flashcard{
 }
 class ViewController: UIViewController {
     
+    @IBOutlet weak var Container: UIView!
     @IBOutlet weak var frontLabel: UILabel!
     @IBOutlet weak var backLabel: UILabel!
     
@@ -63,9 +64,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        frontLabel.isHidden=true
-        
+        //frontLabel.isHidden=true
+        flipFlashcard()
     }
+    func flipFlashcard(){
+        frontLabel.isHidden=true
+        UIView.transition(with:Container, duration: 0.3, options:.transitionFlipFromRight, animations:{
+            self.frontLabel.isHidden = true
+        })
+    }
+    
     
     func updateFlashcard(question: String, answer: String) {
         let flashcard = Flashcard(question: question, answer: answer)
@@ -78,10 +86,13 @@ class ViewController: UIViewController {
         currentIndex = flashcards.count - 1
         print("Our current index is\(currentIndex)")
         
-        //update buttons
-        updateNextPrevButtons()
-    }
         
+        
+        //update buttons
+    updateNextPrevButtons()
+    }
+    
+    
         func updateNextPrevButtons() {
             if currentIndex == flashcards.count - 1{
                 nextButton.isEnabled = false
@@ -95,7 +106,19 @@ class ViewController: UIViewController {
             }
     }
         
+    func animateContainerOut(){
     
+    UIView.animate(withDuration: 0.3,animations: {
+        self.Container.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+    }, completion: { finished in
+    
+    // updte labels
+        self.updateLabels()
+    
+    // Run other animation
+        self.updateLabels()
+    })
+    }
     func updateLabels(){
         
         //Get current flashcard
@@ -106,6 +129,7 @@ class ViewController: UIViewController {
             backLabel.text = currentFlashcard.answer
         
     }
+    
     func saveAllFlashcardsToDisk(){
         
         let dictionaryArray = flashcards.map { (card) -> [String: String] in
@@ -128,4 +152,3 @@ class ViewController: UIViewController {
     }
     
 }
-
